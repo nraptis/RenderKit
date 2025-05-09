@@ -35,7 +35,7 @@ public extension IndexedShapeBuffer2D {
     
     func add(x: Float, y: Float,
              width: Float, height: Float,
-             translation: MathKit.Math.Point, scale: Float, rotation: Float) {
+             translation: Math.Point, scale: Float, rotation: Float) {
         add(cornerX1: x, cornerY1: y,
             cornerX2: x + width, cornerY2: y,
             cornerX3: x, cornerY3: y + height,
@@ -49,7 +49,7 @@ public extension IndexedShapeBuffer2D {
              cornerX2: Float, cornerY2: Float,
              cornerX3: Float, cornerY3: Float,
              cornerX4: Float, cornerY4: Float,
-             translation: MathKit.Math.Point, scale: Float, rotation: Float) {
+             translation: Math.Point, scale: Float, rotation: Float) {
         
         transformCorners(cornerX1: cornerX1, cornerY1: cornerY1, cornerX2: cornerX2, cornerY2: cornerY2,
                          cornerX3: cornerX3, cornerY3: cornerY3, cornerX4: cornerX4, cornerY4: cornerY4,
@@ -93,12 +93,12 @@ public extension IndexedShapeBuffer2D {
     func add(lineX1: Float, lineY1: Float,
              lineX2: Float, lineY2: Float,
              lineThickness: Float,
-             translation: MathKit.Math.Point, scale: Float, rotation: Float) {
+             translation: Math.Point, scale: Float, rotation: Float) {
         
         var dirX = lineX2 - lineX1
         var dirY = lineY2 - lineY1
         var length = dirX * dirX + dirY * dirY
-        if length <= MathKit.Math.epsilon { return }
+        if length <= Math.epsilon { return }
         
         let thickness = lineThickness * 0.5
         length = sqrtf(length)
@@ -121,7 +121,7 @@ public extension IndexedShapeBuffer2DColored {
     
     func add(x: Float, y: Float,
              width: Float, height: Float,
-             translation: MathKit.Math.Point, scale: Float, rotation: Float,
+             translation: Math.Point, scale: Float, rotation: Float,
              red: Float, green: Float, blue: Float, alpha: Float) {
         add(cornerX1: x, cornerY1: y,
             cornerX2: x + width, cornerY2: y,
@@ -169,7 +169,7 @@ public extension IndexedShapeBuffer2DColored {
              cornerX2: Float, cornerY2: Float,
              cornerX3: Float, cornerY3: Float,
              cornerX4: Float, cornerY4: Float,
-             translation: MathKit.Math.Point, scale: Float, rotation: Float,
+             translation: Math.Point, scale: Float, rotation: Float,
              red: Float, green: Float, blue: Float, alpha: Float) {
         
         transformCorners(cornerX1: cornerX1, cornerY1: cornerY1, cornerX2: cornerX2, cornerY2: cornerY2,
@@ -199,7 +199,7 @@ public extension IndexedShapeBuffer2DColored {
              cornerX2: Float, cornerY2: Float, cornerR2: Float, cornerG2: Float, cornerB2: Float, cornerA2: Float,
              cornerX3: Float, cornerY3: Float, cornerR3: Float, cornerG3: Float, cornerB3: Float, cornerA3: Float,
              cornerX4: Float, cornerY4: Float, cornerR4: Float, cornerG4: Float, cornerB4: Float, cornerA4: Float,
-             translation: MathKit.Math.Point, scale: Float, rotation: Float) {
+             translation: Math.Point, scale: Float, rotation: Float) {
         
         transformCorners(cornerX1: cornerX1, cornerY1: cornerY1, cornerX2: cornerX2, cornerY2: cornerY2,
                          cornerX3: cornerX3, cornerY3: cornerY3, cornerX4: cornerX4, cornerY4: cornerY4,
@@ -227,13 +227,13 @@ public extension IndexedShapeBuffer2DColored {
     func add(lineX1: Float, lineY1: Float,
              lineX2: Float, lineY2: Float,
              lineThickness: Float,
-             translation: MathKit.Math.Point, scale: Float, rotation: Float,
+             translation: Math.Point, scale: Float, rotation: Float,
              red: Float, green: Float, blue: Float, alpha: Float) {
         
         var dirX = lineX2 - lineX1
         var dirY = lineY2 - lineY1
         var length = dirX * dirX + dirY * dirY
-        if length <= MathKit.Math.epsilon { return }
+        if length <= Math.epsilon { return }
         
         let thickness = lineThickness * 0.5
         length = sqrtf(length)
@@ -257,7 +257,7 @@ public extension IndexedShapeBuffer3D {
     
     func add(x: Float, y: Float,
              width: Float, height: Float,
-             translation: MathKit.Math.Point) {
+             translation: Math.Point) {
         add(cornerX1: x, cornerY1: y,
             cornerX2: x + width, cornerY2: y,
             cornerX3: x, cornerY3: y + height,
@@ -267,7 +267,7 @@ public extension IndexedShapeBuffer3D {
     
     func add(x: Float, y: Float,
              width: Float, height: Float,
-             translation: MathKit.Math.Point, scale: Float) {
+             translation: Math.Point, scale: Float) {
         add(cornerX1: x, cornerY1: y,
             cornerX2: x + width, cornerY2: y,
             cornerX3: x, cornerY3: y + height,
@@ -278,7 +278,7 @@ public extension IndexedShapeBuffer3D {
     
     func add(x: Float, y: Float,
              width: Float, height: Float,
-             translation: MathKit.Math.Point, scale: Float, rotation: Float) {
+             translation: Math.Point, scale: Float, rotation: Float) {
         add(cornerX1: x, cornerY1: y,
             cornerX2: x + width, cornerY2: y,
             cornerX3: x, cornerY3: y + height,
@@ -311,7 +311,7 @@ public extension IndexedShapeBuffer3D {
              cornerX2: Float, cornerY2: Float,
              cornerX3: Float, cornerY3: Float,
              cornerX4: Float, cornerY4: Float,
-             translation: MathKit.Math.Point) {
+             translation: Math.Point) {
         
         let index1 = UInt32(vertexCount)
         let index2 = index1 + 1
@@ -332,7 +332,7 @@ public extension IndexedShapeBuffer3D {
              cornerX2: Float, cornerY2: Float,
              cornerX3: Float, cornerY3: Float,
              cornerX4: Float, cornerY4: Float,
-             translation: MathKit.Math.Point, scale: Float) {
+             translation: Math.Point, scale: Float) {
         
         transformCorners(cornerX1: cornerX1, cornerY1: cornerY1, cornerX2: cornerX2, cornerY2: cornerY2,
                          cornerX3: cornerX3, cornerY3: cornerY3, cornerX4: cornerX4, cornerY4: cornerY4,
@@ -357,7 +357,7 @@ public extension IndexedShapeBuffer3D {
              cornerX2: Float, cornerY2: Float,
              cornerX3: Float, cornerY3: Float,
              cornerX4: Float, cornerY4: Float,
-             translation: MathKit.Math.Point, scale: Float, rotation: Float) {
+             translation: Math.Point, scale: Float, rotation: Float) {
         
         transformCorners(cornerX1: cornerX1, cornerY1: cornerY1, cornerX2: cornerX2, cornerY2: cornerY2,
                          cornerX3: cornerX3, cornerY3: cornerY3, cornerX4: cornerX4, cornerY4: cornerY4,
@@ -381,12 +381,12 @@ public extension IndexedShapeBuffer3D {
     func add(lineX1: Float, lineY1: Float,
              lineX2: Float, lineY2: Float,
              lineThickness: Float,
-             translation: MathKit.Math.Point, scale: Float, rotation: Float) {
+             translation: Math.Point, scale: Float, rotation: Float) {
         
         var dirX = lineX2 - lineX1
         var dirY = lineY2 - lineY1
         var length = dirX * dirX + dirY * dirY
-        if length <= MathKit.Math.epsilon { return }
+        if length <= Math.epsilon { return }
         
         let thickness = lineThickness * 0.5
         length = sqrtf(length)
@@ -407,12 +407,12 @@ public extension IndexedShapeBuffer3D {
     func add(lineX1: Float, lineY1: Float,
              lineX2: Float, lineY2: Float,
              lineThickness: Float,
-             translation: MathKit.Math.Point, scale: Float) {
+             translation: Math.Point, scale: Float) {
         
         var dirX = lineX2 - lineX1
         var dirY = lineY2 - lineY1
         var length = dirX * dirX + dirY * dirY
-        if length <= MathKit.Math.epsilon { return }
+        if length <= Math.epsilon { return }
         
         let thickness = lineThickness * 0.5
         length = sqrtf(length)
@@ -435,7 +435,7 @@ public extension IndexedShapeBuffer3DColored {
     
     func add(x: Float, y: Float,
              width: Float, height: Float,
-             translation: MathKit.Math.Point, scale: Float, rotation: Float,
+             translation: Math.Point, scale: Float, rotation: Float,
              red: Float, green: Float, blue: Float, alpha: Float) {
         add(cornerX1: x, cornerY1: y,
             cornerX2: x + width, cornerY2: y,
@@ -462,7 +462,7 @@ public extension IndexedShapeBuffer3DColored {
              cornerX2: Float, cornerY2: Float,
              cornerX3: Float, cornerY3: Float,
              cornerX4: Float, cornerY4: Float,
-             translation: MathKit.Math.Point, scale: Float, rotation: Float,
+             translation: Math.Point, scale: Float, rotation: Float,
              red: Float, green: Float, blue: Float, alpha: Float) {
         
         transformCorners(cornerX1: cornerX1, cornerY1: cornerY1, cornerX2: cornerX2, cornerY2: cornerY2,
@@ -492,7 +492,7 @@ public extension IndexedShapeBuffer3DColored {
              cornerX2: Float, cornerY2: Float, cornerR2: Float, cornerG2: Float, cornerB2: Float, cornerA2: Float,
              cornerX3: Float, cornerY3: Float, cornerR3: Float, cornerG3: Float, cornerB3: Float, cornerA3: Float,
              cornerX4: Float, cornerY4: Float, cornerR4: Float, cornerG4: Float, cornerB4: Float, cornerA4: Float,
-             translation: MathKit.Math.Point, scale: Float, rotation: Float) {
+             translation: Math.Point, scale: Float, rotation: Float) {
         
         transformCorners(cornerX1: cornerX1, cornerY1: cornerY1, cornerX2: cornerX2, cornerY2: cornerY2,
                          cornerX3: cornerX3, cornerY3: cornerY3, cornerX4: cornerX4, cornerY4: cornerY4,
@@ -520,13 +520,13 @@ public extension IndexedShapeBuffer3DColored {
     func add(lineX1: Float, lineY1: Float,
              lineX2: Float, lineY2: Float,
              lineThickness: Float,
-             translation: MathKit.Math.Point, scale: Float, rotation: Float,
+             translation: Math.Point, scale: Float, rotation: Float,
              red: Float, green: Float, blue: Float, alpha: Float) {
         
         var dirX = lineX2 - lineX1
         var dirY = lineY2 - lineY1
         var length = dirX * dirX + dirY * dirY
-        if length <= MathKit.Math.epsilon { return }
+        if length <= Math.epsilon { return }
         
         let thickness = lineThickness * 0.5
         length = sqrtf(length)

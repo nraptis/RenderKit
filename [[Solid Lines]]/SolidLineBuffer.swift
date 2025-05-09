@@ -134,7 +134,7 @@ public class SolidLineBuffer<Node: PositionConforming2D,
         var previousX4 = previousX
         var previousY4 = previousY
         
-        if length > MathKit.Math.epsilon {
+        if length > Math.epsilon {
             previousValid = true
             
             length = sqrtf(length)
@@ -159,7 +159,7 @@ public class SolidLineBuffer<Node: PositionConforming2D,
             dirX = currentX - previousX
             dirY = currentY - previousY
             length = dirX * dirX + dirY * dirY
-            if length <= MathKit.Math.epsilon {
+            if length <= Math.epsilon {
                 previousValid = false
                 continue
             }
@@ -199,7 +199,7 @@ public class SolidLineBuffer<Node: PositionConforming2D,
             
             if previousValid {
                 
-                if MathKit.Math.triangleIsClockwise(x1: previousX2, y1: previousY2,
+                if Math.triangleIsClockwise(x1: previousX2, y1: previousY2,
                                             x2: x3, y2: y3,
                                             x3: x1, y3: y1) {
                     

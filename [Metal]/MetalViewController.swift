@@ -86,7 +86,6 @@ open class MetalViewController: UIViewController {
     }
     
     public func startTimer() {
-		print("startTimer")
         if _isMetalEngineLoaded {
             if _isTimerRunning == false {
                 _isTimerRunning = true
@@ -113,7 +112,6 @@ open class MetalViewController: UIViewController {
     }
     
     public func stopTimer() {
-		print("stopTimer")
         if _isTimerRunning == true {
             _isTimerRunning = false
             timer?.invalidate()

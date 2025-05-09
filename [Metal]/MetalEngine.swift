@@ -76,10 +76,6 @@ public class MetalEngine {
                                   height: CGFloat(height))
     }
     
-    deinit {
-        print("[--] MetalEngine")
-    }
-    
     @MainActor func load() {
         buildSamplerStates()
         buildDepthStates()

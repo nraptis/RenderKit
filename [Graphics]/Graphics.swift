@@ -167,10 +167,6 @@ public class Graphics {
         
     }
     
-    deinit {
-        print("[--] Graphics")
-    }
-    
     public private(set) var pipelineState = PipelineState.invalid
     public private(set) var samplerState = SamplerState.invalid
     public private(set) var depthState = DepthState.invalid

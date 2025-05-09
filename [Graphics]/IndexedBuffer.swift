@@ -67,7 +67,7 @@ public class IndexedBuffer<Node: PositionConforming2D,
                           cornerX2: Float, cornerY2: Float,
                           cornerX3: Float, cornerY3: Float,
                           cornerX4: Float, cornerY4: Float,
-                          translation: MathKit.Math.Point, scale: Float) {
+                          translation: Math.Point, scale: Float) {
         _cornerX[0] = cornerX1; _cornerY[0] = cornerY1
         _cornerX[1] = cornerX2; _cornerY[1] = cornerY2
         _cornerX[2] = cornerX3; _cornerY[2] = cornerY3
@@ -96,7 +96,7 @@ public class IndexedBuffer<Node: PositionConforming2D,
                           cornerX2: Float, cornerY2: Float,
                           cornerX3: Float, cornerY3: Float,
                           cornerX4: Float, cornerY4: Float,
-                          translation: MathKit.Math.Point, scale: Float, rotation: Float) {
+                          translation: Math.Point, scale: Float, rotation: Float) {
         _cornerX[0] = cornerX1; _cornerY[0] = cornerY1
         _cornerX[1] = cornerX2; _cornerY[1] = cornerY2
         _cornerX[2] = cornerX3; _cornerY[2] = cornerY3
@@ -109,7 +109,7 @@ public class IndexedBuffer<Node: PositionConforming2D,
                 var y = _cornerY[cornerIndex]
                 
                 var dist = x * x + y * y
-                if dist > MathKit.Math.epsilon {
+                if dist > Math.epsilon {
                     dist = sqrtf(Float(dist))
                     x /= dist
                     y /= dist

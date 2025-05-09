@@ -33,10 +33,6 @@ public class MetalPipeline {
         metalDevice = metalEngine.metalDevice
     }
     
-    deinit {
-        print("[--] MetalPipeline")
-    }
-    
     private var shapeNodeIndexed2DVertexProgram: MTLFunction!
     private var shapeNodeIndexed2DFragmentProgram: MTLFunction!
     private var shapeNodeIndexed3DVertexProgram: MTLFunction!

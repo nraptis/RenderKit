@@ -106,7 +106,7 @@ public class SolidLineBufferOpen {
             dirX = currentX - previousX
             dirY = currentY - previousY
             length = dirX * dirX + dirY * dirY
-            if length <= MathKit.Math.epsilon {
+            if length <= Math.epsilon {
                 index += 1
                 continue
             }
@@ -143,7 +143,7 @@ public class SolidLineBufferOpen {
             
             if didWriteAtLeastOnce {
                 
-                if MathKit.Math.triangleIsClockwise(x1: previousX2, y1: previousY2,
+                if Math.triangleIsClockwise(x1: previousX2, y1: previousY2,
                                             x2: x3, y2: y3,
                                             x3: x1, y3: y1) {
                     
