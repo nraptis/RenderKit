@@ -27,13 +27,16 @@ open class MetalViewController: UIViewController {
     public var isBloomEnabled = true
     
     public var bloomPasses = 2// ? 3 : 2)
-    public nonisolated(unsafe) let stereoSpreadBase = ((UIDevice.current.userInterfaceIdiom == .pad)) ? Float(4.0) : Float(3.0)
-    public nonisolated(unsafe) let stereoSpreadMax = ((UIDevice.current.userInterfaceIdiom == .pad)) ? Float(12.0) : Float(9.0)
+    public let stereoSpreadBase: Float
+    public let stereoSpreadMax: Float
     
     public let metalView: MetalView
     public init(delegate: GraphicsDelegate,
                   width: Float,
                   height: Float) {
+        
+        self.stereoSpreadBase = ((UIDevice.current.userInterfaceIdiom == .pad)) ? Float(4.0) : Float(3.0)
+        self.stereoSpreadMax = ((UIDevice.current.userInterfaceIdiom == .pad)) ? Float(12.0) : Float(9.0)
         
         let _metalView = MetalView(width: CGFloat(Int(width + 0.5)),
                                    height: CGFloat(Int(height + 0.5)))

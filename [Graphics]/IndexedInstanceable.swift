@@ -25,7 +25,7 @@ public protocol IndexedInstanceable<NodeType>: IndexedDrawable {
 
 public extension IndexedInstanceable {
     
-    public func load(graphics: Graphics?) {
+    func load(graphics: Graphics?) {
         
         self.graphics = graphics
         
@@ -61,7 +61,7 @@ public extension IndexedInstanceable {
         isUniformsFragmentBufferDirty = true
     }
     
-    public func render(renderEncoder: MTLRenderCommandEncoder, pipelineState: Graphics.PipelineState) {
+    func render(renderEncoder: MTLRenderCommandEncoder, pipelineState: Graphics.PipelineState) {
         
         guard let graphics = graphics else {
             return
